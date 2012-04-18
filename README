@@ -1,0 +1,6 @@
+This project provides syntax highlighting to Apache Pig Latin language. 
+
+This implementation is adapted from PL/SQL mode in CodeMirror 2.
+
+Reference:
+http://wiki.apache.org/pig/PigLatin
