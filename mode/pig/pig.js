@@ -1,3 +1,9 @@
+/*
+ *	Pig Latin Mode for CodeMirror 2 
+ *	@author Prasanth Jayachandran
+ *	@link 	https://github.com/prasanthj/pig-codemirror-2
+ *  This implementation is adapted from PL/SQL mode in CodeMirror 2.
+*/
 CodeMirror.defineMode("pig", function(config, parserConfig) {
 	var indentUnit = config.indentUnit,
 		keywords = parserConfig.keywords,
@@ -90,8 +96,14 @@ CodeMirror.defineMode("pig", function(config, parserConfig) {
 			// get the while word
 			stream.eatWhile(/[\w\$_]/);
 			// is it one of the listed keywords?
-			if (keywords && keywords.propertyIsEnumerable(stream.current().toUpperCase()))
-				return ("keyword", "keyword");
+			if (keywords && keywords.propertyIsEnumerable(stream.current().toUpperCase())) {
+				if (stream.eat(")") || stream.eat(".")) {
+					//keywords can be used as variables like flatten(group), group.$0 etc..
+				}
+				else {
+					return ("keyword", "keyword");
+				}
+			}
 			// is it one of the builtin functions?
 			if (builtins && builtins.propertyIsEnumerable(stream.current().toUpperCase()))
 				return ("keyword", "variable-2")
