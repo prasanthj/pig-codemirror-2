@@ -7,8 +7,11 @@ This project adds pig mode to codemirror2 and provides syntax highlighting to Pi
 ## Demo 
 Checkout the entire project and launch index.html located at mode/pig directory to view demo site.
 
+## Issues
+Please use github issues page for adding any issues https://github.com/prasanthj/pig-codemirror-2/issues
+
 ## Reference
-CodeMirror 2 github site: https://github.com/marijnh/CodeMirror2
-CodeMirror website: http://codemirror.net/
-Pig Latin language: http://wiki.apache.org/pig/PigLatin
-Apache Pig: http://pig.apache.org/
+* CodeMirror 2 github site: https://github.com/marijnh/CodeMirror2
+* CodeMirror website: http://codemirror.net/
+* Pig Latin language: http://wiki.apache.org/pig/PigLatin
+* Apache Pig: http://pig.apache.org/
