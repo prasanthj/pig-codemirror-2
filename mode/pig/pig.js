@@ -141,7 +141,7 @@ CodeMirror.defineMode("pig", function(config, parserConfig) {
  		return obj;
  	}
 
-	// builtin funcs taken from trunk revision 1303237
+	// builtin funcs taken from trunk revision 1325115
 	var pBuiltins = "ABS ACOS ARITY ASIN ATAN AVG BAGSIZE BINSTORAGE BLOOM BUILDBLOOM CBRT CEIL " 
 	+ "CONCAT COR COS COSH COUNT COUNT_STAR COV CONSTANTSIZE CUBEDIMENSIONS DIFF DISTINCT DOUBLEABS "
 	+ "DOUBLEAVG DOUBLEBASE DOUBLEMAX DOUBLEMIN DOUBLEROUND DOUBLESUM EXP FLOOR FLOATABS FLOATAVG "
