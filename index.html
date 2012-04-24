@@ -34,12 +34,11 @@ STORE c INTO "\path\to\output";
         indentUnit: 4,
         mode: "text/x-pig",
         onKeyEvent: function(cm, ke) {
-        	if(ke.type == "keyup" && ke.keyCode != 8) {
+        	if(ke.type == "keyup" && ke.keyCode != 8 /* backspace */) {
         		CodeMirror.simpleHint(cm, CodeMirror.pigHint);
         	}
         }
       });
-      //extraKeys: {"Ctrl-Space": function(cm) {CodeMirror.simpleHint(cm, CodeMirror.pigHint);}}
     </script>
 
     <p>
