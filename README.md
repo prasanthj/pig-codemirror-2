@@ -2,7 +2,11 @@
 
 ## About 
 CodeMirror 2 is a javascript library that provides a code editor in the browser.
-This project adds pig mode to codemirror2 and provides syntax highlighting to Pig Latin language (used by Apache Pig). 
+This project adds pig mode to codemirror2, provides syntax highlighting and autocompletion to Pig Latin language (used by Apache Pig). 
+
+## Features
+* Syntax highlighting for pig latin (Checkout Online demo)
+* AutoSuggest and AutoCompletion for pig keywords, builtin functions and data types (Online demo not available yet!! Checkout the code to play around.)
 
 ## Demo 
 * Online http://codemirror.net/mode/pig/index.html
