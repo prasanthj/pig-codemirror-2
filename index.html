@@ -35,7 +35,7 @@ STORE c INTO '/path/to/output';
         mode: "text/x-pig",
         onKeyEvent: function(cm, ke) {
         	if(ke.type == "keyup" && ke.keyCode != 8 /* backspace */) {
-                setTimeout(function(){CodeMirror.simpleHint(cm, CodeMirror.pigHint);},20);    
+                setTimeout(function(){CodeMirror.simpleHint(cm, CodeMirror.pigHint);},50);    
         	}
         }
       });
