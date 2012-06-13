@@ -12,17 +12,17 @@
     <style>.CodeMirror {border: 2px inset #dee;}</style>
   </head>
   <body>
-    <h1>CodeMirror: Pig Latin mode</h1>
+    <h1>CodeMirror: Pig Latin mode with AutoCompletion</h1>
 
 <form><textarea id="code" name="code">
 -- Apache Pig (Pig Latin Language) Demo
 /* 
 This is a multiline comment.
 */
-a = LOAD "\path\to\input" USING PigStorage('\t') AS (x:long, y:chararray, z:bytearray);
+a = LOAD '/path/to/input' USING PigStorage('\t') AS (x:long, y:chararray, z:bytearray);
 b = GROUP a BY (x,y,3+4);
 c = FOREACH b GENERATE flatten(group) as (x,y), SUM(group.$2) as z;
-STORE c INTO "\path\to\output";
+STORE c INTO '/path/to/output';
 
 --
 </textarea></form>
@@ -35,7 +35,7 @@ STORE c INTO "\path\to\output";
         mode: "text/x-pig",
         onKeyEvent: function(cm, ke) {
         	if(ke.type == "keyup" && ke.keyCode != 8 /* backspace */) {
-        		CodeMirror.simpleHint(cm, CodeMirror.pigHint);
+                setTimeout(function(){CodeMirror.simpleHint(cm, CodeMirror.pigHint);},20);    
         	}
         }
       });
